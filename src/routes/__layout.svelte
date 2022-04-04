@@ -18,6 +18,9 @@
 	import '../global.css';
 </script>
 
+<svelte:head>
+	<title>Svelte Notes</title>
+</svelte:head>
 <!-- outer wrapper -->
 <Overlay on:close={() => ($sidebarShown = false)} />
 <div class={`flex h-screen w-screen`}>
@@ -28,12 +31,15 @@
 	>
 		<MenuButton />
 		<div>
+			<!-- <button class="h-full bg-slate-600 px-4 text-slate-100 transition-all hover:brightness-125">
+				Local
+			</button> -->
 			<button
 				class="h-full bg-slate-600 px-4 text-slate-100 transition-all hover:brightness-125"
 				on:click={async () => {
 					$selectedFile = await saveNewFile();
 					writeToFile($selectedFile, $editor.getHTML());
-				}}>Save to File</button
+				}}>Save As</button
 			>
 			<button
 				class="h-full bg-slate-600 px-4 text-slate-100 transition-all hover:brightness-125"
