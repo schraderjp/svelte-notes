@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ProseMirror {
+	@apply h-full p-1 pl-2;
+}
+
+.ProseMirror h1 {
+	@apply mb-2 text-4xl;
+}
+
+.ProseMirror h2 {
+	@apply mb-2 text-2xl;
+}
+.ProseMirror h3 {
+	@apply mb-2 text-xl;
+}
+.ProseMirror ul {
+	@apply my-1 ml-8 list-disc;
+}
+.ProseMirror h3 {
+	@apply mb-2 text-xl;
+}
+
+.ProseMirror-focused {
+	@apply focus-visible:outline-none;
+}
